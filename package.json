@@ -7,6 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server --open --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
+    "server": "webpack-dev-server --open --env dev --host 10.10.31.33",
     "mock": "node ./mock/server.js"
   },
   "eslintConfig": {

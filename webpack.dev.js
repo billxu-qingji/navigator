@@ -8,17 +8,13 @@ module.exports = merge(common, {
     historyApiFallback: true,
     inline: true,
     proxy: {
-      '/api/audit': {
-        target: 'http://10.1.15.249',
-      },
-      '/api': {
-        target: 'http://coops.qunhequnhe.com/',
-        changeOrigin: true,
-      },
+      '/api': 'http://10.10.65.84',
+      '/hackday': 'http://attence.qunhequnhe.com',
     },
     overlay: {
       errors: true,
       warning: true,
     },
+    port: 80,
   },
 });
