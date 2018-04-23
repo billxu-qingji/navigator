@@ -5,9 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npm run build:lib && npm run copy-css",
-    "start": "webpack",
-    "server": "webpack-dev-server --open --env dev --host one.qunhequnhe.com",
+    "start": "webpack-dev-server --open --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js",
     "mock": "node ./mock/server.js"
   },
   "eslintConfig": {
@@ -46,7 +45,8 @@
     "url-loader": "^0.6.2",
     "webpack": "^4.0.1",
     "webpack-cli": "^2.0.9",
-    "webpack-dev-server": "^3.0.0"
+    "webpack-dev-server": "^3.0.0",
+    "webpack-merge": "^4.1.2"
   },
   "dependencies": {
     "ant-design-pro": "^1.2.1",
