@@ -1,0 +1,12 @@
+replicaCount: 1
+readinessProbe:
+  path: /
+livenessProbe:
+  path: /
+resources:
+  limits:
+    cpu: '0.5'
+    memory: 500Mi
+  requests:
+    cpu: '0.5'
+    memory: 500Mi
