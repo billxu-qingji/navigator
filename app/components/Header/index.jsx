@@ -84,7 +84,12 @@ class Header extends React.PureComponent {
       <div>
         <Row className="user-center" >
           <Col span={3}>
-            <embed style={{ width: 45, verticalAlign: 'middle' }} src="/public/js/logo_24.svg" type="image/svg+xml" />
+            <img
+              style={{ width: 45, verticalAlign: 'middle' }}
+              src="https://qhyxpicoss.kujiale.com/2018/04/23/LLO2DJYKAEBKKX6FAAAAABA8_96x96.png"
+              type="image/svg+xml"
+              alt="logo"
+            />
             <span style={{ color: '#ddd', fontSize: 30, verticalAlign: 'middle', marginLeft: 8 }}>酷家园</span>
           </Col>
           <Col span={18}>

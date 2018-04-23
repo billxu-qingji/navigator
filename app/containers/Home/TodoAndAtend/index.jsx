@@ -82,7 +82,7 @@ class TodoAndAtend extends React.PureComponent {
               renderItem={item => (
                 <List.Item>
                   <List.Item.Meta
-                    avatar={<Avatar style={{ marginTop: -1 }} src="/public/img/jira.png" />}
+                    avatar={<Avatar style={{ marginTop: -1 }} src="https://qhyxpicoss.kujiale.com/2018/04/23/LLO2DJYKAEBKKX6FAAAAAAQ8_64x64.png" />}
                     title={<a href={item.link}>{item.title}</a>}
                   />
                 </List.Item>
