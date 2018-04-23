@@ -1,0 +1,27 @@
+variables:
+  IMAGE: "registry.qunhequnhe.com/coops/general-page"
+
+stages:
+  - build
+  - deploy
+
+build:
+  image: registry.qunhequnhe.com/infra/tools/toolbox:1.0.0
+  stage: build
+  only:
+    - master
+  tags:
+    - kube-runner
+  script:
+    - docker build . -t ${IMAGE}:${CI_COMMIT_SHA:0:8}
+    - docker push ${IMAGE}:${CI_COMMIT_SHA:0:8}
+
+deploy:
+  image: registry.qunhequnhe.com/infra/helm:2.1.0
+  stage: deploy
+  only:
+    - master
+  tags:
+    - kube-runner
+  script:
+    - helm upgrade --install general-page --kube-context=new-dev --namespace=coops -f values.yaml --set image=${IMAGE}:${CI_COMMIT_SHA:0:8} /server
