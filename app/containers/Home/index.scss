@@ -1,0 +1,33 @@
+.ant-layout-header {
+    background: #ccc;
+    opacity: 0.9;
+}
+
+.ant-layout-content {
+    width: 1243px;
+    padding: 20px;
+    margin: 0 auto;
+    .content-row {
+        margin-top: 8px;
+        .border-line{
+            margin-bottom: 20px;
+        }
+        .border-line:last-child{
+            margin-bottom: 0;
+        }
+    }
+    .content-row:first-child {
+        margin-top: 0;
+    }
+    .const_site_row {
+        .const_site_card {
+            .ant-card-body {
+                padding: 10px;
+                .site_logo {
+                    float: left;
+                    margin-right: 20px;
+                }
+            }
+        }
+    }
+}

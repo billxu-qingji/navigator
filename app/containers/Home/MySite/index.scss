@@ -1,0 +1,44 @@
+.my_site_row {
+    .add_site_icon {
+        cursor: pointer;
+        font-size: 22px;
+    }
+}
+
+.add_my_site_row {
+    margin-top: 20px;
+}
+
+.add_my_site_row:first-child {
+    margin-top: 0;
+}
+
+.site {
+    display: inline-block;
+    text-align: center;
+    width: 52px;
+    margin-right: 40px;
+    .my_site_btn {
+        font-family: 'Microsoft YaHei';
+        font-size: 24px;
+        width: 52px;
+        height: 52px;
+        border-radius: 15px;
+        text-align: center;
+        vertical-align: middle;
+        line-height: 52px;
+        user-select: none;
+        text-transform: uppercase;
+        display: inline-block;
+        padding: 0px;
+        margin: 0px;
+        color: white;
+        cursor: pointer;
+    }
+}
+
+.anticon.anticon-cross {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+}

@@ -6,22 +6,21 @@ module.exports = {
   entry: path.resolve(__dirname, 'app/index.jsx'),
   output: {
     path: path.resolve(__dirname, 'build'),
-    filename: 'bundle.js',
+    filename: 'bundle_[chunkhash:8].js',
   },
   devServer: {
     contentBase: './public',
     historyApiFallback: true,
     inline: true,
     proxy: {
-      '/api/audit': {
-        target: 'http://10.1.15.249',
-      },
-      '/api': 'http://localhost:8000',
+      '/api': 'http://10.10.65.84',
+      '/hackday': 'http://attence.qunhequnhe.com',
     },
     overlay: {
       errors: true,
       warning: true,
     },
+    port: 80,
   },
   resolve: {
     extensions: [' ', '.js', '.jsx'],
@@ -76,8 +75,8 @@ module.exports = {
     }),
     new CopyWebpackPlugin([
       {
-        from: 'node_modules/monaco-editor/min/vs',
-        to: 'vs',
+        from: 'public',
+        to: 'public',
       },
     ]),
   ],

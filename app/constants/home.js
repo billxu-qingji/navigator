@@ -1,0 +1,4 @@
+const GET_SITES = 'GET_SITES';
+const GET_RECORD = 'GET_RECORD';
+
+export { GET_SITES, GET_RECORD };

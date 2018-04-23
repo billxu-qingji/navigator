@@ -1,0 +1,26 @@
+.ant-input-affix-wrapper {
+    display: block;
+    width: 1200px;
+    margin: 15px auto;
+}
+
+.ant-layout-header {
+    background-color: #1388f5 !important;
+}
+
+.search>.ant-input {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: none;
+}
+
+.search>.ant-input::-webkit-input-placeholder {
+    color: #eee;
+}
+
+.avatar {
+    background: transparent;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+}
