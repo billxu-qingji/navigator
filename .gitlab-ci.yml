@@ -24,4 +24,4 @@ deploy:
   tags:
     - kube-runner
   script:
-    - helm upgrade --install general-page --kube-context=new-dev --namespace=coops -f values.yaml --set image=${IMAGE}:${CI_COMMIT_SHA:0:8} /server
+    - helm upgrade --install navigator-page --kube-context=new-dev --namespace=coops -f values.yaml --set image=${IMAGE}:${CI_COMMIT_SHA:0:8} /server
