@@ -71,5 +71,11 @@ module.exports = {
         to: 'codemirror',
       },
     ]),
+    new CopyWebpackPlugin([
+      {
+        from: 'public',
+        to: 'public',
+      },
+    ]),
   ],
 };
