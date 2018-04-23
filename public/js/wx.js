@@ -1,4 +1,3 @@
-/*eslint-disable*/
 !function (a, b, c) {
   function d(c) {
     console.log(c);
