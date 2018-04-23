@@ -4,4 +4,4 @@ WORKDIR /app
 RUN yarn && yarn build
 
 FROM registry.qunhequnhe.com/infra/nginx:0.4.0
-COPY --from=builder /app/dist/* /usr/share/nginx/html/
+COPY --from=builder /build/* /usr/share/nginx/html/
