@@ -163,8 +163,8 @@ class Header extends React.PureComponent {
                 />
               </Tab>
               <Tab key="ladp" tab="LADP登录">
-                <UserName name="username" />
-                <Password name="password" />
+                <UserName name="username" style={{ width: '100%' }} />
+                <Password name="password" style={{ width: '100%' }} />
                 <Submit>登录</Submit>
               </Tab>
             </Login>
