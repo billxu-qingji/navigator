@@ -1,9 +1,8 @@
-.ant-input-affix-wrapper {
-    display: block;
-    width: 1200px;
-    margin: 15px auto;
-}
-
+// .ant-input-affix-wrapper {
+//     display: block;
+//     width: 1200px;
+//     margin: 15px auto;
+// }
 .ant-layout-header {
     background-color: #1388f5 !important;
 }
@@ -23,4 +22,25 @@
     border-radius: 50%;
     width: 35px;
     height: 35px;
+}
+
+.header {
+    display: flex;
+    min-width: 1200px;
+    .logo {
+        flex-basis: 200px;
+        flex-grow: 0;
+    }
+    .search {
+        margin: 0 auto;
+        flex-grow: 1;
+        flex-shrink: 1;
+        max-width: 1200px;
+    }
+    .user {
+        flex-basis: 200px;
+        flex-grow: 0;
+        margin-left: 20px;
+        text-align: center;
+    }
 }

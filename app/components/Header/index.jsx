@@ -1,5 +1,5 @@
 import React from 'react';
-import { Row, Col, Input, Avatar, Modal, Dropdown, Menu } from 'antd';
+import { Input, Avatar, Modal, Dropdown, Menu } from 'antd';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import axios from 'axios';
@@ -82,8 +82,8 @@ class Header extends React.PureComponent {
     );
     return (
       <div>
-        <Row className="user-center" >
-          <Col span={3}>
+        <div className="header" >
+          <div className="logo">
             <img
               style={{ width: 45, verticalAlign: 'middle' }}
               src="https://qhyxpicoss.kujiale.com/2018/04/23/LLO2DJYKAEBKKX6FAAAAABA8_96x96.png"
@@ -91,8 +91,8 @@ class Header extends React.PureComponent {
               alt="logo"
             />
             <span style={{ color: '#ddd', fontSize: 30, verticalAlign: 'middle', marginLeft: 8 }}>酷家园</span>
-          </Col>
-          <Col span={18}>
+          </div>
+          <div className="search">
             <Dropdown overlay={menu} trigger={['focus']}>
               <Search
                 className="search"
@@ -101,8 +101,8 @@ class Header extends React.PureComponent {
                 onSearch={value => { this.searchHandler(value); }}
               />
             </Dropdown>
-          </Col>
-          <Col span={3} style={{ float: 'right' }}>
+          </div>
+          <div className="user">
             {
               !this.props.user.username
                 ?
@@ -134,8 +134,8 @@ class Header extends React.PureComponent {
                 )
             }
 
-          </Col>
-        </Row>
+          </div>
+        </div>
         <Modal
           title="推荐使用二维码登录"
           footer={null}

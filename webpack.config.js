@@ -13,14 +13,13 @@ module.exports = {
     historyApiFallback: true,
     inline: true,
     proxy: {
-      '/api': 'http://10.10.65.84',
-      '/hackday': 'http://attence.qunhequnhe.com',
+      '/api': 'http://one.qunhequnhe.com',
     },
     overlay: {
       errors: true,
       warning: true,
     },
-    port: 80,
+    port: 8000,
   },
   resolve: {
     extensions: [' ', '.js', '.jsx'],
