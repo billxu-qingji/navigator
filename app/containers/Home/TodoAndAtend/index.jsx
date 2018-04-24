@@ -27,6 +27,7 @@ class TodoAndAtend extends React.PureComponent {
     super(props);
     this.state = {
       todos: [],
+      currentPage: 1,
     };
     this.getAttendRecord();
   }
@@ -61,6 +62,7 @@ class TodoAndAtend extends React.PureComponent {
     }
   }
   render() {
+    console.log(this.state.todos.slice((this.state.currentPage - 1) * 6, this.state.currentPage * 6));
     return (
       <Row gutter={8} className="content-row" key="todoAndAtend">
         <Col span={12}>
@@ -69,12 +71,19 @@ class TodoAndAtend extends React.PureComponent {
               pagination={{
                 pageSize: 6,
                 total: this.state.todos.length,
+                defaultPageSize: 6,
                 size: 'small',
                 hideOnSinglePage: true,
+                onChange: (current) => {
+                  this.setState({
+                    currentPage: current,
+                  });
+                },
               }}
               itemLayout="horizontal"
-              dataSource={this.state.todos.map(item => {
+              dataSource={this.state.todos.slice((this.state.currentPage - 1) * 6, this.state.currentPage * 6).map((item, index) => {
                 return {
+                  key: index,
                   title: item.title,
                   link: item.link,
                 };
@@ -104,8 +113,8 @@ class TodoAndAtend extends React.PureComponent {
                 return {
                   key: index,
                   createDate: item.checkDate,
-                  bgTime: item.checktime1,
-                  endTime: item.checktime2,
+                  bgTime: item.checktime1 && item.checktime1.replace(item.checkDate + ' ', ''),
+                  endTime: item.checktime2 && item.checktime2.replace(item.checkDate + ' ', ''),
                 };
               })}
             />
