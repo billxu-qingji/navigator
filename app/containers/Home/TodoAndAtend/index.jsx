@@ -37,6 +37,7 @@ class TodoAndAtend extends React.PureComponent {
     try {
       const res = await axios.get(HOME.GET_ATTEND_RECORD + `?userid=${this.props.user.username || ''}`);
       if (res.data.success) {
+        console.log(getRecord(res.data.data));
         this.props.dispatch(getRecord(res.data.data));
       } else {
         throw new Error(res.data.message);
