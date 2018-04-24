@@ -35,11 +35,7 @@ class TodoAndAtend extends React.PureComponent {
   }
   getAttendRecord = async () => {
     try {
-      const res = await axios.get(HOME.GET_ATTEND_RECORD + `?userid=${this.props.user.username || ''}`, {
-        proxy: {
-          host: 'http://attence.qunhequnhe.com',
-        },
-      });
+      const res = await axios.get(HOME.GET_ATTEND_RECORD + `?userid=${this.props.user.username || ''}`);
       if (res.data.success) {
         this.props.dispatch(getRecord(res.data.data));
       } else {
