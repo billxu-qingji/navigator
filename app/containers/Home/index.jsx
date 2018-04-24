@@ -23,6 +23,7 @@ class Home extends React.PureComponent {
     this.state = {
     };
     this.getSite();
+    console.log('home init');
   }
   getSite = async () => {
     try {

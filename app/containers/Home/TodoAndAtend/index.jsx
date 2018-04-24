@@ -67,12 +67,11 @@ class TodoAndAtend extends React.PureComponent {
           <Card style={{ width: '100%', height: 350 }} title="JIRA TODO LIST">
             <List
               pagination={{
-                pageSize: 2,
+                pageSize: 6,
                 total: this.state.todos.length,
                 size: 'small',
-                // hideOnSinglePage: true,
-              }
-              }
+                hideOnSinglePage: true,
+              }}
               itemLayout="horizontal"
               dataSource={this.state.todos.map(item => {
                 return {

@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 import axios from 'axios';
 import { hashHistory } from 'react-router';
 import Login from 'ant-design-pro/lib/Login';
+import { getSites } from '../../actions/home';
 import { login } from '../../actions/user';
 import { USER, HOME as HOME_API } from '../../constants/api';
 import './index.scss';
@@ -25,10 +26,23 @@ class Header extends React.PureComponent {
       const res = await axios.post(USER.LOGIN, values);
       if (res.data.success) {
         this.props.dispatch(login({ username: values.username }));
+        this.getSite();
         this.setState({
           visible: false,
         });
         hashHistory.push('/');
+      } else {
+        throw new Error(res.data.message);
+      }
+    } catch (error) {
+      console.log(error.toString());
+    }
+  }
+  getSite = async () => {
+    try {
+      const res = await axios.post(HOME_API.GET_SITES);
+      if (res.data.success) {
+        this.props.dispatch(getSites(res.data.data));
       } else {
         throw new Error(res.data.message);
       }

@@ -4,6 +4,7 @@ import { Row, Col, Card, List, Avatar, Icon } from 'antd';
 
 import axios from 'axios';
 import { HOME } from '../../../constants/api';
+import './index.scss';
 
 // eslint-disable-next-line
 const IconText = ({ type, text }) => (
@@ -38,7 +39,7 @@ export default class CONFLUENCE extends React.PureComponent {
   }
   render() {
     return (
-      <Row className="content-row">
+      <Row className="content-row confluence">
         <Col span={24}>
           <Card title="CONFLUENCE十大热帖">
             <List
@@ -57,7 +58,7 @@ export default class CONFLUENCE extends React.PureComponent {
                     key={item.title}
                   >
                     <List.Item.Meta
-                      avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
+                      avatar={<Avatar src="https://qhyxpicoss.kujiale.com/2018/04/24/LLPQFGAKAEBKKYOQAAAAAAI8_256x256.png" />}
                       title={<a href={item.linkAddr}>{item.title}</a>}
                     />
                   </List.Item>
